@@ -1,18 +1,20 @@
-<p>nav-bar works!</p>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
-	<a class="navbar-brand" href="#">Angular</a>
+<nav class="navbar navbar-expand-md navbar-dark bg-light sticky-top">
+	<a class="navbar-brand text-dark" routerLink="/home">FaceChal</a>
 	<button class="navbar-toggler hidden-sm-up" type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
 	<div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
 		<ul class="navbar-nav mr-auto">
+      <li class="nav-item " >
+				<a class="nav-link text-dark"  id="id01" routerLink="/home">Home</a>
+      </li>
 			<li class="nav-item dropdown" ngbDropdown>
-				<a class="nav-link dropdown-toggle" id="id01" href="#" ngbDropdownToggle>Files</a>
+				<a class="nav-link text-dark dropdown-toggle" id="id01" routerLink="#" ngbDropdownToggle>Files</a>
 				<div class="dropdown-menu" aria-labelledby="id01" ngbDropdownMenu>
-					<a class="dropdown-item" href="#">HTML</a>
-					<a class="dropdown-item" href="#">TS</a>
-					<a class="dropdown-item" href="#">JS</a>
+					<a class="dropdown-item" routerLink="#">HTML</a>
+					<a class="dropdown-item" routerLink="#">TS</a>
+					<a class="dropdown-item" routerLink="#">JS</a>
 				</div>
 			</li>
 		</ul>
